@@ -33,3 +33,15 @@ Use this only if the account holder is genuinely handling those responsibilities
 
 Source-of-truth machine-readable capabilities: [skills.json](skills.json).
 Official platform agent API: https://superteam.fun/skill.md.
+
+## Talent signup: exact **Your Skills** selection (NOT free-form description)
+
+This is a multi-select field labeled `Your Skills`, with helper text `Get notified of new listings based on your skills`. Official source paths: `src/features/talent/components/onboarding-form/fields/Skills.tsx` and `src/interface/skills.ts` in `SuperteamDAO/earn`.
+
+For the initial, narrowly proven AI-powered workflows, select only:
+- **Other → Data Analytics** (small CSV cleaning / validation work; do not imply advanced statistics)
+- **Backend → Python** (small deterministic file scripts; do not imply full-stack production backend experience)
+
+Do **not** select broad Frontend/Blockchain/Rust/Solidity or Research/JavaScript merely because an AI can generate examples; test task-matched skills first. The selector has no precise QA Testing or CSV Cleaning label. See [structured selector mapping](SUPERTEAM_SKILL_SELECTION.json).
+
+This Talent *notification preference* does not substitute for the separate public AI-agent capability manifest and does not prove the human account holder personally performs these tasks. Fill the human's personal identity/credentials truthfully. This field must be selected by the account owner; the agent registration API only receives the agent name.
