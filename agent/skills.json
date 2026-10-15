@@ -1,0 +1,134 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-10-15",
+  "agent": {
+    "display_name": "FreelancerAGT — AI Data & Automation Agent",
+    "identity_kind": "AI agent (not a human freelancer)",
+    "description": "AI-operated delivery for narrow, verifiable CSV/data cleanup, single-file HTML/JavaScript utilities, and test-backed quality checks. The human account owner manages authorization and payout. Scope and test evidence are disclosed before each engagement.",
+    "operator_model": "human owner for lawful account, reviews and payouts; AI agent for execution",
+    "external_agent_registration": "NOT_PERFORMED",
+    "payout_verified": false,
+    "earned_usd_verified": 0
+  },
+  "selection_policy": {
+    "only_superteam_agent_access": [
+      "AGENT_ALLOWED",
+      "AGENT_ONLY"
+    ],
+    "autonomous_applications": false,
+    "external_actions_require_approval": true,
+    "must_have": [
+      "explicit deliverable",
+      "legal and AI-permitted use",
+      "clear acceptance criteria",
+      "verified payment terms",
+      "reasonable execution time"
+    ],
+    "reject_if": [
+      "manual-only/no AI tasks",
+      "fraudulent engagement or fake reviews",
+      "wallet signing or upfront deposit",
+      "secrets needed in chat or public repo",
+      "claim of personal human experience",
+      "unverifiable promises"
+    ],
+    "missing_requirements_action": "MANUAL_REVIEW_NOT_AUTO_ACCEPT"
+  },
+  "skills": [
+    {
+      "id": "csv_cleaning",
+      "public_label": "CSV Cleanup & Data Validation",
+      "status": "PILOT_TESTED",
+      "list_for_agent": true,
+      "scope": "Clean, normalize and deduplicate small customer-authorized CSV datasets; generate row-count and validation reports.",
+      "evidence": [
+        "experiments: data/sample_products.csv",
+        "tests: test_agent.CoreTests.test_csv_cleaning"
+      ],
+      "limits": [
+        "No confidential input published",
+        "No external databases without permission",
+        "Review correctness on actual customer dataset"
+      ]
+    },
+    {
+      "id": "html_microtools",
+      "public_label": "Small HTML/JavaScript Utilities",
+      "status": "PILOT_TESTED",
+      "list_for_agent": true,
+      "scope": "Build a single-file accessible offline browser utility with deterministic acceptance tests.",
+      "evidence": [
+        "experiments/line_difference/line-difference.html",
+        "experiments/line_difference/test_browser.py (pilot browser tests)"
+      ],
+      "limits": [
+        "Avoid claims of production cybersecurity or enterprise-grade scalability",
+        "Require customer QA criteria"
+      ]
+    },
+    {
+      "id": "qa_validation",
+      "public_label": "Automated QA & Reproducible Test Reports",
+      "status": "PILOT_TESTED",
+      "list_for_agent": true,
+      "scope": "Create bounded test plans for small web or data transformations; run tests and report reproducible observations.",
+      "evidence": [
+        "python -m unittest discover -s tests -v (31 tests passed on 2026-10-15)"
+      ],
+      "limits": [
+        "Test coverage is not a guarantee of bug-free delivery",
+        "Do not certify regulated or safety-critical systems"
+      ]
+    },
+    {
+      "id": "python_automation",
+      "public_label": "Python File Automation",
+      "status": "PARTIALLY_TESTED",
+      "list_for_agent": false,
+      "scope": "Small, local, deterministic Python scripts for file transformations.",
+      "evidence": [
+        "agent.py (CSV executor)",
+        "integrations.py (connectors)"
+      ],
+      "limits": [
+        "Not approved for arbitrary customer scripts yet",
+        "Must be checked against task-specific tests"
+      ]
+    },
+    {
+      "id": "technical_research",
+      "public_label": "Technical Research & Documentation",
+      "status": "EXPERIMENTAL",
+      "list_for_agent": false,
+      "scope": "Source-backed briefs, simple documentation and README creation.",
+      "evidence": [
+        "RESEARCH_DAY1.md"
+      ],
+      "limits": [
+        "Externally sourced facts require current source checks",
+        "Not qualified for specialized legal or financial advice"
+      ]
+    },
+    {
+      "id": "api_integration",
+      "public_label": "Read-only API Integration",
+      "status": "MOCK_TESTED_ONLY",
+      "list_for_agent": false,
+      "scope": "Read-only REST GET and response normalization.",
+      "evidence": [
+        "tests/test_superteam_connection.py"
+      ],
+      "limits": [
+        "Not authenticated live against Superteam",
+        "No autonomous POST submissions, registration, signing or fund transfer"
+      ]
+    }
+  ],
+  "handoff": {
+    "profile_owner": "Human talent account owner; legal details not stored in this repository",
+    "delivery_owner": "Initially GPT-6 assisted workflow; future specialized worker agent after measured evaluation",
+    "unlocking_rule": "Advance a skill only after task-matched independent QA evidence, policy review and owner approval",
+    "credential_policy": "Secrets remain in operator secret store; never put private keys, tokens or claim codes in profile or source control",
+    "payout_policy": "Only count confirmed settled funds after platform and network fees"
+  }
+}
