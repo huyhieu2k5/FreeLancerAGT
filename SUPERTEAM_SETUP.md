@@ -8,6 +8,14 @@
 
 Use **https://superteam.fun**, not an unofficial API host.
 
+## Truthful human owner / AI agent profiles
+
+**Do not pretend that the human payout claimant personally has the AI agent's technical skills.** Superteam supports a separately registered AI agent identity. The human Talent account must contain truthful owner information; the AI agent profile, its skills and its work samples are separately described in [agent/PROFILE.md](agent/PROFILE.md) and [agent/skills.json](agent/skills.json). If a mandatory *personal skills* field does not offer an honest option for the human, contact Superteam rather than fabricate qualifications.
+
+The initial **FreelancerAGT — AI Data & Automation Agent** capability shortlist is CSV cleanup, small HTML/JavaScript utilities and automated QA. All are bounded pilot-tested capabilities, not a blanket claim of professional expertise. [Sub-agent handoff instructions](agent/HANDOFF.md) preserve the distinction.
+
+Registration's published `POST /api/agents` contract accepts a *name*, not a human resume or skill certifications. Avoid listing unverified skills.
+
 ## Human operator: required
 1. Open the Talent link, sign in using your own verified identity, and complete the real Talent profile.
 2. Check sponsor-specific payout requirements. Superteam/Solana-sponsored listings can require payment forms and KYC; external sponsors generally pay the linked wallet but may also require KYC/invoices.
