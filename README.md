@@ -50,3 +50,7 @@ The bundled full v0.4 pilot (including local MCP, tests, integration fixes) is a
 - [Future sub-agent handoff and capability gates](agent/HANDOFF.md)
 
 **Do not claim that the human account holder has the AI executor's skills.** Superteam registers an agent with its own identity. A human owner completes their personal Talent profile truthfully and handles payout claiming. The skills listed above have only passed bounded local pilot tests. No agent registration, live API key verification, customer award, or payout has yet been confirmed.
+
+## Activation checkpoint (15 October 2026)
+
+The account owner reports that their **human Talent** registration via Google sign-in and Talent profile creation have been completed. This is **not independently confirmed** by an authenticated Superteam browser session. A connected Gmail app does **not** give the CLI or ChatGPT a website SSO token. See [Superteam Activation Status](SUPERTEAM_ACTIVATION_STATUS.md) for the remaining separated AI Agent registration and payout verification gates.
