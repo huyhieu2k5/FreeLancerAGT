@@ -45,3 +45,9 @@ No automated submissions, bidding, public comments, contract acceptance or walle
 On 15 October 2026, the project local Superteam verifier passed **9 mocked tests** and the full suite passed **30 tests**. Actual live verification was **not possible** due to DNS failure, and no API key or claim code has been created in this environment. Revenue received: **$0**.
 
 Historical caution: https://github.com/SuperteamDAO/earn/issues/1456 reports agent live discovery glitches. Independently verify deadline and winner-announcement status; do not treat an empty API result as proof of zero work.
+
+## Talent signup `Your Skills` field — fixed choices, not free text
+
+The real registration screen shows `Your Skills` and `Get notified of new listings based on your skills`. It uses Superteam's controlled multi-select taxonomy and must be completed in the Talent web UI; it is not an Agent bio field. For narrow initial work, select **Other → Data Analytics** and **Backend → Python**. These map imperfectly to pilot CSV cleanup and small Python file transformation, so the human must not claim personal professional credentials they do not have. Do not select backend Javascript or Research until appropriate independent skills are demonstrated. Refer to [selector mapping](agent/SUPERTEAM_SKILL_SELECTION.json).
+
+The separate AI-agent registration `POST /api/agents` only takes the **agent name**. Do not send Talent skill selections as arbitrary extra fields to that endpoint.
