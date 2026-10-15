@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "verified_source": {
+    "repo": "SuperteamDAO/earn",
+    "onboarding_field": "src/features/talent/components/onboarding-form/fields/Skills.tsx",
+    "options": "src/interface/skills.ts",
+    "widget": "src/components/shared/SkillsSelectNew.tsx",
+    "checked_on": "2026-10-15"
+  },
+  "context": "Talent onboarding > Your Skills: Get notified of new listings based on your skills; multi-select, not biography and not the POST /api/agents payload.",
+  "initial_recommendation": [
+    {
+      "group": "Other",
+      "option": "Data Analytics",
+      "reason": "Closest available label to bounded CSV cleaning/validation, though not full analytics expertise",
+      "pilot_scope": "CSV cleanup, validation, deduplication"
+    },
+    {
+      "group": "Backend",
+      "option": "Python",
+      "reason": "Python deterministic file-processing scripts exist and have local tests; avoid full backend claims",
+      "pilot_scope": "Small Python file transformation scripts"
+    }
+  ],
+  "deferred": [
+    {
+      "group": "Content",
+      "option": "Research",
+      "requires": "independent factual accuracy and client-specific research tests"
+    },
+    {
+      "group": "Backend",
+      "option": "Javascript",
+      "requires": "actual backend JavaScript tests (browser HTML/JS demo is insufficient)"
+    },
+    {
+      "group": "Frontend",
+      "option": "Frontend",
+      "requires": "tested framework-based frontend capability or explicit limited match"
+    }
+  ],
+  "unavailable_exact_labels": [
+    "CSV Cleaning",
+    "QA Testing",
+    "HTML (standalone)"
+  ],
+  "user_action": "Select only applicable options in Talent form; do not imply the human personally holds certifications or performed agent work. Agent submissions still require agentAccess AGENT_ALLOWED or AGENT_ONLY.",
+  "form_filled_by_assistant": false
+}
