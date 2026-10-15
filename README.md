@@ -1,0 +1,37 @@
+# FreeLancerAGT — bootstrap
+
+Freelancer Autonomous Agent research/pilot (15 Oct 2026).
+
+## Current status
+- GitHub application connected and this repository initialized for the project.
+- The **tested full source** (Python CLI, six-tool local MCP server, 21 unit tests, research scanner, sample executor, CI/workflow templates) is available as a downloadable ZIP in the project's ChatGPT conversation.
+- **The full source archive has NOT yet been synced to this GitHub repository.** Do not assume a workflow or autonomous income process is deployed merely because this README exists.
+- No paid work, automatic external applications or verified payout have occurred.
+
+## Safe operating model
+Official public API discovery → evidence-based scoring → human-approved application → deterministic executor & QA → authorized delivery → verified payout/ledger.
+
+Never commit credentials, wallet private keys, customer files, bank/KYC documents, or receipts to this **public** repository.
+
+## Sync local pilot code
+Extract `freelancer_agent_mcp_v0.3.zip` from the ChatGPT conversation. From the extracted project folder, after reviewing files and secrets:
+
+```bash
+git init
+git remote add origin https://github.com/huyhieu2k5/FreeLancerAGT.git
+git fetch origin main
+git checkout -b main origin/main
+git add .gitignore .env.example *.py *.md mcp.config.example.json .github/workflows tests data/demo_jobs.json data/sample_products.csv
+git commit -m "Import reviewed freelancer pilot source"
+git push -u origin main
+```
+
+This GitHub push requires the repository owner's authentication. If your extracted files are not in the project root, adjust paths accordingly.
+
+## Income blockers
+- Human verified marketplace worker identity and approved external submissions
+- Payout account / eligible bank or wallet, KYC where required
+- Verified escrow, actual completion and acceptance, actual settled funds
+- Proper handling of provider ToS, private data, platform fees, and compliance
+
+Official MCP SDK: https://py.sdk.modelcontextprotocol.io/
